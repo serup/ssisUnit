@@ -54,6 +54,10 @@ namespace SsisUnit
         [Description("Connection String used by SQL Commands or the name of a ConnectionManager in the package"),
          Editor("SsisUnit.Design.ConnectionStringEditor, SsisUnit.Design.2019, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),
          ReadOnly(false)]
+#elif SQL2022
+        [Description("Connection String used by SQL Commands or the name of a ConnectionManager in the package"),
+         Editor("SsisUnit.Design.ConnectionStringEditor, SsisUnit.Design.2022, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),
+         ReadOnly(false)]
 #endif
 
         public string ConnectionString { get; set; }
@@ -100,6 +104,10 @@ namespace SsisUnit
 #elif SQL2019
         [Description("The invariant name of the ADO.NET provider to use when ConnectionType == AdoNet."),
          TypeConverter("SsisUnit.Design.ConnectionRefInvariantTypeConverter, SsisUnit.Design.2019, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab"),
+         ReadOnly(false)]
+#elif SQL2022
+        [Description("The invariant name of the ADO.NET provider to use when ConnectionType == AdoNet."),
+         TypeConverter("SsisUnit.Design.ConnectionRefInvariantTypeConverter, SsisUnit.Design.2022, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab"),
          ReadOnly(false)]
 #endif
         public string InvariantType { get; set; }

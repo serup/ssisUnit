@@ -133,6 +133,10 @@ namespace SsisUnit
 #elif SQL2019
         [Description("The Actual Dataset that the DataCompareCommmand will use"),
          TypeConverter("SsisUnit.Design.DatasetConverter, SsisUnit.Design.2019, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab")]
+#elif SQL2022
+        [Description("The Actual Dataset that the DataCompareCommmand will use"),
+         TypeConverter("SsisUnit.Design.DatasetConverter, SsisUnit.Design.2022, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab")]
+
 #endif
         public Dataset ActualDataset
         {
@@ -166,6 +170,10 @@ namespace SsisUnit
 #elif SQL2019
         [Description("The Expected Dataset that the DataCompareCommand will use"),
          TypeConverter("SsisUnit.Design.DatasetConverter, SsisUnit.Design.2019, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab")]
+#elif SQL2022
+        [Description("The Expected Dataset that the DataCompareCommand will use"),
+         TypeConverter("SsisUnit.Design.DatasetConverter, SsisUnit.Design.2022, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fbed22cbef36cab")]
+
 #endif
         public Dataset ExpectedDataset
         {

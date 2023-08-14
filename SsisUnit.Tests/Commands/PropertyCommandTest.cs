@@ -71,6 +71,8 @@ namespace UTssisUnit.Commands
             packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2017.dtsx");
 #elif SQL2019
             packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2019.dtsx");
+#elif SQL2022
+            packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2022.dtsx");
 #endif
 
             var ts = new SsisTestSuite();
@@ -158,6 +160,8 @@ namespace UTssisUnit.Commands
             packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2017.dtsx");
 #elif SQL2019
             packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2019.dtsx");
+#elif SQL2022
+            packageFilepath = UnpackToFile("UTssisUnit.TestPackages.PropertyTest2022.dtsx");
 #endif
 
             var ts = new SsisTestSuite();
